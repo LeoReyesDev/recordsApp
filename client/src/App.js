@@ -151,7 +151,7 @@ function App() {
       console.log("SAVE DATA: ", id, "Record Update: ", recordList);
       setRecordList(
         recordList.map((val) => {
-          return val.id == id
+          return val.id === id
             ? {
                 id: val.id,
                 CODIGO: val.codigo,
@@ -194,7 +194,7 @@ function App() {
     Axios.delete(`http://localhost:3001/delete/${id}`).then((response) => {
       setRecordList(
         recordList.filter((val) => {
-          return val.id != id;
+          return val.id !== id;
         })
       );
     });
